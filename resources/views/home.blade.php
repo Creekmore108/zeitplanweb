@@ -18,5 +18,7 @@
   @include('sections.price')
 
   @include('sections.contact')
+
+ 
 </main>
 @endsection

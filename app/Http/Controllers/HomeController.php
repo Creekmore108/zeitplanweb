@@ -8,8 +8,9 @@ use App\Models\Setting;
 use App\Models\Gallery;
 use App\Models\Feature;
 use App\Models\Faq;
-use App\Models\Price;
+use App\Models\Plan;
 use App\Models\EmailList;
+use App\Models\Contact;
 
 
 class HomeController extends Controller
@@ -28,31 +29,34 @@ class HomeController extends Controller
         $faqs = Faq::all();
         $features = Feature::all();
         // dd($features);
-        $prices = Price::all();
+        $plans = Plan::all();
+        // dd($plans);
 
         $galleries = Gallery::all();
         // dd($galleries);
         
         
-         return view('home', compact('settings', 'faqs', 'features', 'prices', 'galleries'));
+         return view('home', compact('settings', 'faqs', 'features', 'plans', 'galleries'));
 
     }
 
-    public function save_email($email)
+    public function save_email(Request $request)
     {
-        dd($email);
-        EmailList::create($email);
+        // dd($request);
+        EmailList::create($request->all());
         
-        // User::create($request->all());
-
+        return redirect()->back();
 
     }
 
-    public function contact_form()
+    public function contact_form(Request $request)
     {
-
-
+        // dd($request);
+        Contact::create($request->all());
+        
+        return redirect()->back();
     }
 
+    
     
 }

@@ -17,8 +17,9 @@ class Feature extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'text',
+        'feature_name',
+        'plan_id',
+        'feature_detail',
         'created_at',
         'updated_at',
         'deleted_at',

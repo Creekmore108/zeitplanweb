@@ -20,6 +20,9 @@
 
   <!-- Main Stylesheet File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+  <!-- Slider Stylesheet File -->
+  <link href="{{ asset('css/slider.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -47,6 +50,10 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{ asset('js/app.js') }}"></script>
+
+  <javascript type="text/javascript">
+  
+</javascript>
   @yield('scripts')
 </body>
 

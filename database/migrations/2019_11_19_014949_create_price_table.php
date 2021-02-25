@@ -8,12 +8,18 @@ class CreatePriceTable extends Migration
 {
     public function up()
     {
-        Schema::create('price', function (Blueprint $table) {
+        Schema::create('plan', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('name');
+            $table->string('plan_name');
 
-            $table->decimal('price', 15, 2);
+            $table->decimal('base_price', 15, 2);
+
+            $table->decimal('user_price', 15, 2);
+
+            $table->integer('min');
+
+            $table->integer('max');
 
             $table->timestamps();
 

@@ -10,8 +10,11 @@
       @foreach($features as $feature)
         <div class="col-lg-4 col-md-6">
           <div class="details" >
-              <h3>{{ $feature->name }}</h3>
-              <p>{{ $feature->text }}</p>
+              <h3>{{ $feature->feature_name }} 
+                @if($feature->plan_id == 2)<span style="color:blue">(Mid-Level)</span>@endif
+                @if($feature->plan_id == 3)<span style="color:green">(advanced-Level)</span>@endif
+              </h3>
+              <p>{{ $feature->feature_detail }}</p>
           </div>
         </div>
       @endforeach

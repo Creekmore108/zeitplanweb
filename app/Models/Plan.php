@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Price extends Model
+class Plan extends Model
 {
 
-    public $table = 'price';
+    public $table = 'plan';
 
     protected $dates = [
         'created_at',
@@ -16,9 +16,12 @@ class Price extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'price',
+        'plan_name',
+        'base_price',
+        'user_price',
         'description',
+        'min',
+        'max',
         'created_at',
         'updated_at',
         'deleted_at',
